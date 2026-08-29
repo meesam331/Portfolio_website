@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meesam Raza | Data Scientist & Generative AI Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Meesam Raza — Data Scientist, ML Engineer, and Generative AI Developer."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-[#0A0A0A] text-white antialiased selection:bg-cyan-500 selection:text-black">
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10 px-6 py-4">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <span class="font-bold text-lg tracking-wider cyan-gradient-text">MR.</span>
+        <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+          <a href="#about" class="nav-link hover:text-cyan-400 transition-colors">About</a>
+          <a href="#skills" class="nav-link hover:text-cyan-400 transition-colors">Skills</a>
+          <a href="#projects" class="nav-link hover:text-cyan-400 transition-colors">Projects</a>
+          <a href="#stats" class="nav-link hover:text-cyan-400 transition-colors">Impact</a>
+          <a href="#experience" class="nav-link hover:text-cyan-400 transition-colors">Experience</a>
+          <a href="#contact" class="nav-link hover:text-cyan-400 transition-colors">Contact</a>
+        </div>
+        <button id="theme-toggle" class="p-2 rounded-lg bg-white/5 border border-white/10 hover:border-cyan-400/50 transition-all" aria-label="Toggle theme">
+          <i data-lucide="sun" class="w-4 h-4 text-cyan-400"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <div id="particles-js" class="absolute inset-0 -z-10"></div>
+
+      <div class="max-w-5xl mx-auto px-6 text-center z-10 fade-up">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-6 cta-button">
+          Available for AI/ML Opportunities
+        </span>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight hero-title">
+          Hi, I'm <span class="cyan-gradient-text">Meesam Raza</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 font-light hero-subtitle">
+          Data Scientist | Machine Learning Engineer | Generative AI Developer
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 hero-actions">
+          <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,245,255,0.3)] cta-button">
+            View Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#" download class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-white/20 hover:bg-white/5 transition-all flex items-center justify-center gap-2 cta-button">
+            Download Resume <i data-lucide="download" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
+          <div class="glass-card rounded-2xl p-4 fade-up">
+            <div class="text-2xl font-bold text-cyan-400">10K+</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Records Cleaned</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 fade-up">
+            <div class="text-2xl font-bold text-cyan-400">88%</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Model Accuracy</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 fade-up">
+            <div class="text-2xl font-bold text-cyan-400">3x</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Faster Reporting</div>
+          </div>
+          <div class="glass-card rounded-2xl p-4 fade-up">
+            <div class="text-2xl font-bold text-cyan-400">5+</div>
+            <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">AI Projects</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-24 relative">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center fade-up">
+          <div class="flex justify-center">
+            <div class="floating relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden glass-card p-2">
+              <div class="w-full h-full rounded-xl bg-gradient-to-tr from-cyan-500/20 via-blue-500/20 to-violet-500/20 flex items-center justify-center border border-white/10">
+                <span class="text-6xl font-bold cyan-gradient-text">MR</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-xs uppercase tracking-[0.2em] mb-4">About</div>
+            <h2 class="text-3xl font-bold mb-6">AI & data solutions that turn complexity into decisions</h2>
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+              Data Scientist and Generative AI Developer skilled in Python, Machine Learning, and LLMs. Experienced building predictive models, chatbots, and data pipelines with Scikit-learn and LangChain, turning raw data into actionable business insights.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4 text-sm">
+              <div class="glass-card rounded-xl p-4">
+                <div class="text-cyan-400 font-semibold mb-1">Location</div>
+                <div class="text-gray-300">Khairpur, Sindh, Pakistan</div>
+              </div>
+              <div class="glass-card rounded-xl p-4">
+                <div class="text-cyan-400 font-semibold mb-1">Focus</div>
+                <div class="text-gray-300">ML, NLP, GenAI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="py-12">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl fade-up">
+          <div class="text-cyan-400 text-xs uppercase tracking-[0.25em] mb-2">Core</div>
+          <div class="text-3xl font-bold mb-2">Python</div>
+          <p class="text-gray-300 text-sm">Data science, ML pipelines, experimentation and automation.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl fade-up">
+          <div class="text-cyan-400 text-xs uppercase tracking-[0.25em] mb-2">Intelligent Apps</div>
+          <div class="text-3xl font-bold mb-2">LLMs</div>
+          <p class="text-gray-300 text-sm">Prompt engineering, retrieval workflows, and chatbot systems.</p>
+        </div>
+        <div class="glass-card p-6 rounded-2xl fade-up">
+          <div class="text-cyan-400 text-xs uppercase tracking-[0.25em] mb-2">Delivery</div>
+          <div class="text-3xl font-bold mb-2">Deployment</div>
+          <p class="text-gray-300 text-sm">Streamlit, Flask, Docker, AWS and Railway-based app deployment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-black/40">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center fade-up section-title">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="glass-card p-6 rounded-2xl fade-up">
+            <h3 class="text-xl font-semibold mb-4 text-cyan-400">AI / Machine Learning</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">Regression</span>
+              <span class="skill-chip">Classification</span>
+              <span class="skill-chip">Clustering</span>
+              <span class="skill-chip">Random Forest</span>
+              <span class="skill-chip">XGBoost</span>
+              <span class="skill-chip">Neural Networks</span>
+              <span class="skill-chip">PCA</span>
+            </div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl fade-up">
+            <h3 class="text-xl font-semibold mb-4 text-cyan-400">Generative AI & NLP</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip">LLM Integration</span>
+              <span class="skill-chip">Prompt Engineering</span>
+              <span class="skill-chip">LangChain</span>
+              <span class="skill-chip">OpenAI API</span>
+              <span class="skill-chip">Chatbot Development</span>
+              <span class="skill-chip">RAG Systems</span>
+            </div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl fade-up">
+            <h3 class="text-xl font-semibold mb-4 text-cyan-400">Programming & Data</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">R</span>
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">Scikit-learn</span>
+              <span class="skill-chip">Pandas</span>
+              <span class="skill-chip">Seaborn</span>
+              <span class="skill-chip">NumPy</span>
+            </div>
+          </div>
+          <div class="glass-card p-6 rounded-2xl fade-up">
+            <h3 class="text-xl font-semibold mb-4 text-cyan-400">Tools & Deployment</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip">Streamlit</span>
+              <span class="skill-chip">Flask</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">AWS</span>
+              <span class="skill-chip">Railway</span>
+              <span class="skill-chip">Power BI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="glass-card p-8 md:p-12 rounded-3xl border border-cyan-500/30 relative overflow-hidden fade-up">
+          <div class="flex items-center gap-2 text-cyan-400 text-xs font-semibold tracking-widest uppercase mb-4">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> VIP Featured Showcase
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Air Quality Index Prediction System — Khairpur</h2>
+          <p class="text-gray-300 max-w-2xl mb-6">Built and deployed a high-accuracy regression pipeline using Random Forest and XGBoost to monitor and predict local environmental metrics.</p>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs rounded-full">Streamlit</span>
+            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs rounded-full">XGBoost</span>
+            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs rounded-full">Random Forest</span>
+            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs rounded-full">Railway</span>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://railway.app" target="_blank" rel="noreferrer" class="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-xl hover:bg-cyan-300 transition-all flex items-center gap-2 cta-button">
+              View Live Demo <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" class="px-6 py-3 border border-white/20 rounded-xl hover:bg-white/5 transition-all flex items-center gap-2 cta-button">
+              View Source <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center fade-up section-title">Featured Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-cyan-500/40 transition-all project-card fade-up">
+            <div>
+              <span class="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-3 inline-block">AI / ML</span>
+              <h3 class="text-xl font-semibold mb-3">Air Quality Index Prediction System</h3>
+              <p class="text-gray-400 text-sm mb-6 leading-relaxed">Predictive AQI regression model utilizing Random Forest and XGBoost deployed for real-time inference.</p>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Python</span>
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Streamlit</span>
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">XGBoost</span>
+              </div>
+              <a href="https://github.com" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors">
+                <i data-lucide="github" class="w-4 h-4"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-cyan-500/40 transition-all project-card fade-up">
+            <div>
+              <span class="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-3 inline-block">Forecasting</span>
+              <h3 class="text-xl font-semibold mb-3">Next-Day Stock Price Prediction</h3>
+              <p class="text-gray-400 text-sm mb-6 leading-relaxed">Time-series forecasting regression model designed to project daily market performance, evaluated using RMSE and MAE.</p>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Python</span>
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Time-Series</span>
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Scikit-learn</span>
+              </div>
+              <a href="https://github.com" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors">
+                <i data-lucide="github" class="w-4 h-4"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-cyan-500/40 transition-all project-card fade-up">
+            <div>
+              <span class="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-3 inline-block">Analytics</span>
+              <h3 class="text-xl font-semibold mb-3">Unemployment in Pakistan (2000–2023)</h3>
+              <p class="text-gray-400 text-sm mb-6 leading-relaxed">In-depth analytical visualization mapping 20+ years of regional macroeconomic trends through interactive heatmaps.</p>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Data Analytics</span>
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Pandas</span>
+                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Seaborn</span>
+              </div>
+              <a href="https://github.com" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors">
+                <i data-lucide="github" class="w-4 h-4"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-black/40">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-16 text-center fade-up section-title">Work Experience</h2>
+        <div class="max-w-3xl mx-auto relative border-l border-white/10 pl-6 md:pl-8 space-y-12">
+          <div class="relative fade-up glass-card p-6 rounded-2xl">
+            <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_10px_#00F5FF]"></div>
+            <h3 class="text-xl font-bold">Data Science Intern</h3>
+            <div class="text-cyan-400 text-sm mb-4">Data Zenix Company (Remote)</div>
+            <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+              <li>Cleaned and preprocessed 10,000+ record datasets, reducing missing data by 20% using KNN and mean/median imputation.</li>
+              <li>Automated reports and visualizations in Python, Pandas, and Seaborn, improving delivery speed by 3x.</li>
+            </ul>
+          </div>
+
+          <div class="relative fade-up glass-card p-6 rounded-2xl">
+            <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_10px_#00F5FF]"></div>
+            <h3 class="text-xl font-bold">AI & Machine Learning Intern</h3>
+            <div class="text-cyan-400 text-sm mb-4">DevelopersHub Corporation (Remote)</div>
+            <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+              <li>Built classification models (Logistic Regression, Random Forest, Gradient Boosting) achieving 88% accuracy via GridSearchCV tuning.</li>
+              <li>Applied PCA and correlation analysis for feature selection, improving model performance and interpretability.</li>
+            </ul>
+          </div>
+
+          <div class="relative fade-up glass-card p-6 rounded-2xl">
+            <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_10px_#00F5FF]"></div>
+            <h3 class="text-xl font-bold">GenAI Consulting Virtual Intern</h3>
+            <div class="text-cyan-400 text-sm mb-4">BCG Simulation (Remote)</div>
+            <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
+              <li>Built a prototype chatbot using LangChain and OpenAI API to answer financial queries from 10-K report data.</li>
+              <li>Applied prompt engineering to improve response accuracy and relevance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center fade-up section-title">Get In Touch</h2>
+        <div class="grid md:grid-cols-2 gap-12 fade-up">
+          <div class="glass-card p-6 rounded-2xl">
+            <h3 class="text-xl font-semibold mb-4">Let's build something together</h3>
+            <p class="text-gray-400 text-sm mb-8 leading-relaxed">
+              I am actively seeking AI/ML Engineer opportunities. Feel free to reach out via email or direct message.
+            </p>
+            <div class="space-y-4 text-sm text-gray-300">
+              <a href="mailto:meesamraza331@gmail.com" class="flex items-center gap-3 hover:text-cyan-400 transition-colors">
+                <i data-lucide="mail" class="w-5 h-5 text-cyan-400"></i> meesamraza331@gmail.com
+              </a>
+              <a href="https://github.com" target="_blank" rel="noreferrer" class="flex items-center gap-3 hover:text-cyan-400 transition-colors">
+                <i data-lucide="github" class="w-5 h-5 text-cyan-400"></i> GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="flex items-center gap-3 hover:text-cyan-400 transition-colors">
+                <i data-lucide="linkedin" class="w-5 h-5 text-cyan-400"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="glass-card p-6 rounded-2xl space-y-4">
+            <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all text-sm" />
+            <input type="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all text-sm" />
+            <textarea rows="4" placeholder="Your Message" required class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all text-sm resize-none"></textarea>
+            <button type="submit" class="w-full py-3.5 bg-cyan-400 text-black font-semibold rounded-xl hover:bg-cyan-300 transition-all flex items-center justify-center gap-2 text-sm shadow-[0_0_15px_rgba(0,245,255,0.2)] cta-button">
+              Send Message <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+            <div id="toast" class="hidden p-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-center rounded-xl text-sm">
+              Message sent successfully!
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-8 border-t border-white/10 text-center text-xs text-gray-500">
+      <div class="max-w-6xl mx-auto px-6">
+        © <span id="year"></span> Meesam Raza. Built with HTML, CSS & JS.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
