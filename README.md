@@ -1,28 +1,36 @@
-# Meesam Raza Portfolio
+# Meesam Raza — Portfolio
 
-A premium personal portfolio website built using plain HTML, CSS, and JavaScript — no frameworks or libraries beyond the optional CDN assets for fonts, icons, and particle animation.
+A premium personal portfolio website built using plain HTML, CSS, and JavaScript — no frameworks or libraries beyond optional CDN assets for fonts, icons, and particle animation.
+
+🔗 **Live Site:** [portfolio-website-delta-amber-62.vercel.app](https://portfolio-website-delta-amber-62.vercel.app/)
+
+---
 
 ## Overview
 
-This project is a modern one-page portfolio for a Data Scientist, Machine Learning Engineer, and Generative AI Developer. It includes:
+This project is a modern, one-page portfolio for a Data Scientist, Machine Learning Engineer, and Generative AI Developer. It includes:
 
-- animated hero section
-- dark premium styling with neon cyan accents
-- about section with profile presentation
-- skills and expertise cards
-- featured project showcase
-- experience and impact highlights
-- contact call-to-action
-- responsive layout for desktop and mobile
+- Animated hero section
+- Dark, premium styling with neon cyan accents
+- About section with profile presentation
+- Skills and expertise cards
+- Featured project showcase
+- Experience and impact highlights
+- Contact call-to-action
+- Fully responsive layout for desktop and mobile
+
+---
 
 ## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript
-- Tailwind CSS CDN
+- Tailwind CSS (CDN)
 - Lucide Icons
 - Particles.js
+
+---
 
 ## Project Structure
 
@@ -31,35 +39,43 @@ Portfolio/
 ├── index.html
 ├── styles.css
 ├── script.js
-├── README.md
+└── README.md
 ```
+
+---
 
 ## Run Locally
 
-From the project folder, run:
+Clone the repository and navigate into the project folder, then run:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open:
+Open your browser and visit:
 
 ```text
-http://localhost:8000
+portfolio-website-delta-amber-62.vercel.app
 ```
+
+---
 
 ## Deployment
 
-This portfolio can be deployed on any static hosting site such as:
+This portfolio can be deployed on any static hosting platform, including:
 
 - GitHub Pages
 - Netlify
 - Vercel
 - Firebase Hosting
 
+---
+
 ## Contact
 
 For professional inquiries, collaboration, or project discussions, use the contact section on the website or connect through the available social links.
+
+---
 
 ## License
 
