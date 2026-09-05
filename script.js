@@ -1,10 +1,11 @@
 lucide.createIcons();
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
 const themeToggle = document.getElementById('theme-toggle');
 const root = document.documentElement;
-const icon = themeToggle.querySelector('svg');
+const icon = themeToggle?.querySelector('svg');
 
 const setTheme = (isDark) => {
   root.classList.toggle('dark', isDark);
@@ -12,16 +13,26 @@ const setTheme = (isDark) => {
   document.body.classList.toggle('bg-white', !isDark);
   document.body.classList.toggle('text-white', isDark);
   document.body.classList.toggle('text-black', !isDark);
-  icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+  if (icon) icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
   lucide.createIcons();
 };
 
-themeToggle.addEventListener('click', () => {
+themeToggle?.addEventListener('click', () => {
   const isDark = !root.classList.contains('dark');
   setTheme(isDark);
 });
 
 setTheme(true);
+
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+menuToggle?.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  menuToggle.querySelector('svg')?.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+  lucide.createIcons();
+});
 
 particlesJS('particles-js', {
   particles: {
@@ -76,18 +87,30 @@ const observer = new IntersectionObserver(
 
 fadeElements.forEach((element) => observer.observe(element));
 
-const motionItems = document.querySelectorAll('.glass-card, .project-card, .floating, .skill-chip, .cta-button');
+const motionItems = document.querySelectorAll('.project-card, .floating, .skill-chip, .cta-button');
 
 window.addEventListener('pointermove', (event) => {
   const x = (event.clientX / window.innerWidth - 0.5) * 18;
   const y = (event.clientY / window.innerHeight - 0.5) * 18;
 
-  motionItems.forEach((item, index) => {
-    const depth = (index + 1) * 0.9;
-    item.style.setProperty('--rx', `${(y / depth) * -1}deg`);
-    item.style.setProperty('--ry', `${(x / depth) * 1.2}deg`);
+  document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
+  document.documentElement.style.setProperty('--pointer-y', `${event.clientY}px`);
+  motionItems.forEach((item) => {
+    const bounds = item.getBoundingClientRect();
+    const localX = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const localY = (event.clientY - bounds.top) / bounds.height - 0.5;
+    item.style.setProperty('--rx', `${localY * -4}deg`);
+    item.style.setProperty('--ry', `${localX * 5}deg`);
   });
 });
+
+const progress = document.getElementById('scroll-progress');
+const updateProgress = () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  if (progress) progress.style.width = `${scrollable ? (window.scrollY / scrollable) * 100 : 0}%`;
+};
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
 
 const navLinks = document.querySelectorAll('a[href^="#"]');
 navLinks.forEach((link) => {
@@ -98,7 +121,30 @@ navLinks.forEach((link) => {
 
     event.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    mobileMenu?.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
   });
+});
+
+document.querySelectorAll('[data-count]').forEach((counter) => {
+  const target = Number(counter.dataset.count);
+  const animateCount = () => {
+    const start = performance.now();
+    const duration = 1200;
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      counter.textContent = Math.floor((1 - Math.pow(1 - progress, 3)) * target).toLocaleString();
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  const countObserver = new IntersectionObserver((entries, observer) => {
+    if (entries[0].isIntersecting) {
+      animateCount();
+      observer.disconnect();
+    }
+  }, { threshold: 0.8 });
+  countObserver.observe(counter);
 });
 
 const contactForm = document.getElementById('contact-form');
