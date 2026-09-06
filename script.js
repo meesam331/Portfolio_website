@@ -3,6 +3,40 @@ lucide.createIcons();
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
+const soundControl = document.getElementById('floating-sound-control');
+let audioContext;
+let soundEnabled = true;
+
+const playUiTone = (frequency = 540) => {
+  if (!soundEnabled) return;
+  audioContext ??= new AudioContext();
+  const oscillator = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+  oscillator.type = 'sine';
+  oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+  oscillator.frequency.exponentialRampToValueAtTime(frequency * 1.35, audioContext.currentTime + 0.08);
+  gain.gain.setValueAtTime(0.0001, audioContext.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.035, audioContext.currentTime + 0.01);
+  gain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 0.11);
+  oscillator.connect(gain).connect(audioContext.destination);
+  oscillator.start();
+  oscillator.stop(audioContext.currentTime + 0.12);
+};
+
+soundControl?.addEventListener('click', () => {
+  soundEnabled = !soundEnabled;
+  soundControl.classList.toggle('is-muted', !soundEnabled);
+  soundControl.setAttribute('aria-pressed', String(soundEnabled));
+  soundControl.setAttribute('aria-label', soundEnabled ? 'Turn sound off' : 'Turn sound on');
+  soundControl.title = soundEnabled ? 'Sound on, click to mute' : 'Sound off, click to enable';
+  if (soundEnabled) playUiTone(430);
+});
+
+document.querySelectorAll('a, button').forEach((element) => {
+  if (element.dataset.noClickSound === 'true') return;
+  element.addEventListener('click', () => playUiTone(560));
+});
+
 const themeToggle = document.getElementById('theme-toggle');
 const root = document.documentElement;
 const icon = themeToggle?.querySelector('svg');

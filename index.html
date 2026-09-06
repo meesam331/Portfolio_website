@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -53,30 +53,33 @@
       </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section class="hero-stage relative min-h-screen flex items-center overflow-hidden pt-20">
       <div id="particles-js" class="absolute inset-0 -z-10"></div>
+      <div class="hero-portrait" aria-hidden="true">
+        <img src="profile.gif" alt="Meesam Raza in a professional portrait" />
+      </div>
+      <div class="hero-grid-lines" aria-hidden="true"></div>
 
-      <div class="max-w-5xl mx-auto px-6 text-center z-10 fade-up">
-        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-6 cta-button">
-          Available for AI/ML Opportunities
-        </span>
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight hero-title">
-          Hi, I'm <span class="cyan-gradient-text">Meesam Raza</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-8 font-light hero-subtitle">
-          Data Scientist | Machine Learning Engineer | Generative AI Developer
-        </p>
+      <div class="hero-social-rail" aria-label="Social links">
+        <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:meesamraza331@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+      </div>
 
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 hero-actions">
-          <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,245,255,0.3)] cta-button">
-            View Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-          <a href="#" download class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-white/20 hover:bg-white/5 transition-all flex items-center justify-center gap-2 cta-button">
-            Download Resume <i data-lucide="download" class="w-4 h-4"></i>
-          </a>
+      <div class="hero-side-index" aria-hidden="true"><span>01</span><b>PROFILE</b><span>05</span><b>PROJECTS</b></div>
+
+      <div class="hero-content max-w-6xl mx-auto px-6 z-10 fade-up">
+        <div class="hero-kicker"><span></span> DATA SCIENCE / GENERATIVE AI</div>
+        <h1 class="hero-title">Meesam <span class="cyan-gradient-text">Raza</span></h1>
+        <p class="hero-subtitle">Data Scientist building predictive systems, intelligent applications, and useful interfaces from complex data.</p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="hero-action hero-action-primary"><i data-lucide="arrow-down-right"></i> Explore work</a>
+          <a href="#contact" class="hero-action"><i data-lucide="mail"></i> Hire me</a>
+          <a href="Meesam_Raza_Resume.pdf" download="Meesam_Raza_Resume.pdf" class="hero-action hero-action-muted"><i data-lucide="download"></i> Resume PDF</a>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
+        <div class="hero-metrics">
           <div class="glass-card rounded-2xl p-4 fade-up stat-card">
             <div class="text-2xl font-bold text-cyan-400"><span data-count="10000">0</span>+</div>
             <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Records Cleaned</div>
@@ -95,6 +98,8 @@
           </div>
         </div>
       </div>
+
+      <a class="hero-scroll-cue" href="#about"><span>Scroll to explore</span><i data-lucide="arrow-down"></i></a>
     </section>
 
     <section id="about" class="py-24 relative">
@@ -422,6 +427,29 @@
         © <span id="year"></span> Meesam Raza. Built with HTML, CSS & JS.
       </div>
     </footer>
+
+    <button
+      type="button"
+      id="floating-sound-control"
+      data-floating-sound-control
+      data-no-click-sound="true"
+      aria-label="Turn sound off"
+      aria-pressed="true"
+      title="Sound on, click to mute"
+      class="audio-control"
+    >
+      <span class="audio-control-orbit" aria-hidden="true"></span>
+      <span class="audio-control-ring" aria-hidden="true"></span>
+      <span class="audio-control-core">
+        <span class="audio-control-glow" aria-hidden="true"></span>
+        <svg class="audio-wave" viewBox="0 0 104 60" role="img" aria-hidden="true">
+          <title>Sound on</title>
+          <path d="M6 30 L10 30 L13 26 L17 34 L21 30 L24 20 L28 40 L32 28 L37 32 L42 30 L46 18 L50 42 L55 27 L60 33 L65 30 L70 16 L75 44 L80 28 L86 32 L91 30 L95 29 L98 30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" class="audio-wave-trace"></path>
+          <path d="M6 30 L10 30 L13 26 L17 34 L21 30 L24 20 L28 40 L32 28 L37 32 L42 30 L46 18 L50 42 L55 27 L60 33 L65 30 L70 16 L75 44 L80 28 L86 32 L91 30 L95 29 L98 30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" class="audio-wave-active"></path>
+          <path d="M6 30 L10 30 L13 30 L17 30 L21 30 L24 30 L28 30 L32 30 L37 30 L42 30 L46 30 L50 30 L55 30 L60 30 L65 30 L70 30 L75 30 L80 30 L86 30 L91 30 L95 30 L98 30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6" class="audio-wave-muted"></path>
+        </svg>
+      </span>
+    </button>
 
     <script src="script.js"></script>
   </body>

@@ -1,82 +1,90 @@
-# Meesam Raza — Portfolio
+# Meesam Raza | Data Science & Generative AI Portfolio
 
-A premium personal portfolio website built using plain HTML, CSS, and JavaScript — no frameworks or libraries beyond optional CDN assets for fonts, icons, and particle animation.
+<div align="center">
 
-🔗 **Live Site:** [portfolio-website-delta-amber-62.vercel.app](https://portfolio-website-delta-amber-62.vercel.app/)
+![Portfolio preview](profile.gif)
 
----
+### Building useful intelligence from complex data.
 
-## Overview
+Data Scientist · Machine Learning Engineer · Generative AI Developer
 
-This project is a modern, one-page portfolio for a Data Scientist, Machine Learning Engineer, and Generative AI Developer. It includes:
+[Live portfolio](https://portfolio-website-delta-amber-62.vercel.app/) · [Email Meesam](mailto:meesamraza331@gmail.com)
 
-- Animated hero section
-- Dark, premium styling with neon cyan accents
-- About section with profile presentation
-- Skills and expertise cards
-- Featured project showcase
-- Experience and impact highlights
-- Contact call-to-action
-- Fully responsive layout for desktop and mobile
+</div>
 
----
+## About
 
-## Tech Stack
+This is the personal portfolio of **Meesam Raza**, focused on practical machine learning, generative AI, and data products. The site presents selected work, technical strengths, professional experience, and ways to connect in a responsive single-page experience.
 
-- HTML5
-- CSS3
-- JavaScript
-- Tailwind CSS (CDN)
-- Lucide Icons
-- Particles.js
+The visual language is inspired by a quiet AI lab: dark surfaces, cyan signal lines, precise typography, and a static cinematic hero that keeps the work readable.
 
----
+## What is inside
 
-## Project Structure
+- Professional hero with local animated portrait asset (`profile.gif`)
+- About section with location and focus areas
+- Technical skills across ML, NLP, GenAI, data, and deployment
+- Featured Sales Signal regression demo
+- Air Quality Index prediction showcase
+- Project cards for forecasting and analytics work
+- Experience timeline and measurable impact
+- Contact form with success feedback
+- Responsive desktop and mobile layouts
+- Accessible floating sound control with mute state and subtle UI tones
+
+## Selected work
+
+| Project | Focus | Stack |
+| --- | --- | --- |
+| [Sales Signal](https://github.com/meesam331/sales_prediction_app) | Explainable advertising-to-sales prediction | Flask, Regression, JSON API |
+| Air Quality Index Prediction | Environmental regression and real-time inference | Streamlit, XGBoost, Random Forest |
+| Next-Day Stock Price Prediction | Time-series forecasting evaluated with RMSE and MAE | Python, Scikit-learn |
+| Unemployment in Pakistan | Regional macroeconomic trend analysis | Pandas, Seaborn, Data Analytics |
+
+## Built with
+
+`HTML5` `CSS3` `JavaScript` `Tailwind CSS CDN` `Lucide Icons` `Google Fonts`
+
+The project is intentionally framework-free so it stays fast, portable, and easy to deploy on any static host.
+
+## Run locally
 
 ```bash
-Portfolio/
-├── index.html
-├── styles.css
-├── script.js
-└── README.md
-```
-
----
-
-## Run Locally
-
-Clone the repository and navigate into the project folder, then run:
-
-```bash
+git clone <your-repository-url>
+cd Portfolio
 python -m http.server 8000
 ```
 
-Open your browser and visit:
+Open [http://localhost:8000](http://localhost:8000) in your browser.
+
+## Project structure
 
 ```text
-portfolio-website-delta-amber-62.vercel.app
+Portfolio/
+├── index.html      # Page structure and portfolio content
+├── styles.css      # Visual system, responsive layout, and hero treatment
+├── script.js       # Navigation, counters, sound control, and interactions
+├── profile.gif     # Local animated profile portrait
+└── README.md       # Project documentation
 ```
-
----
 
 ## Deployment
 
-This portfolio can be deployed on any static hosting platform, including:
+Because this is a static site, it can be deployed directly to:
 
-- GitHub Pages
-- Netlify
 - Vercel
+- Netlify
+- GitHub Pages
 - Firebase Hosting
 
----
+No build step or environment variables are required.
 
 ## Contact
 
-For professional inquiries, collaboration, or project discussions, use the contact section on the website or connect through the available social links.
+For AI/ML opportunities, collaboration, or project conversations:
 
----
+- Email: [meesamraza331@gmail.com](mailto:meesamraza331@gmail.com)
+- GitHub: [github.com/meesam331](https://github.com/meesam331)
 
 ## License
 
-This project is for personal portfolio use.
+Personal portfolio project. Content and profile imagery belong to Meesam Raza.
