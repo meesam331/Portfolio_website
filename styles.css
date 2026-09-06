@@ -299,9 +299,10 @@ footer {
 .hero-stage #particles-js { display: none; }
 .hero-stage::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #050708 0%, rgba(5, 7, 8, 0.82) 32%, rgba(5, 7, 8, 0.2) 75%, #050708 100%); z-index: 0; }
 .hero-stage::after { content: ''; position: absolute; inset: 0; opacity: 0.3; background: linear-gradient(90deg, transparent 0 2.3%, rgba(10, 252, 219, 0.2) 2.35%, transparent 2.4% 97.5%, rgba(10, 252, 219, 0.2) 97.55%, transparent 97.6%); z-index: 1; pointer-events: none; }
-.hero-portrait { position: absolute; inset: 0 7% 0 31%; overflow: hidden; background: #15191a; }
-.hero-portrait::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #050708 0%, rgba(5, 7, 8, 0.05) 48%, rgba(5, 7, 8, 0.78) 100%), linear-gradient(0deg, rgba(5, 7, 8, 0.96), transparent 44%, rgba(5, 7, 8, 0.28)); }
-.hero-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; filter: grayscale(0.78) contrast(1.12); opacity: 0.68; mix-blend-mode: screen; }
+.hero-portrait { position: absolute; top: 8rem; right: 7%; bottom: 5rem; width: min(34vw, 30rem); overflow: hidden; border: 1px solid rgba(10, 252, 219, 0.28); background: #15191a; box-shadow: 0 0 0 1rem rgba(10, 252, 219, 0.025), 0 2rem 5rem rgba(0, 0, 0, 0.4); }
+.hero-portrait::before { content: ''; position: absolute; inset: -1.5rem; background: inherit; filter: blur(1.5rem); opacity: 0.45; z-index: -1; }
+.hero-portrait::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5, 7, 8, 0.08), rgba(5, 7, 8, 0.72)), linear-gradient(90deg, rgba(5, 7, 8, 0.28), transparent 46%, rgba(5, 7, 8, 0.25)); }
+.hero-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; filter: grayscale(0.62) contrast(1.08); opacity: 0.76; }
 .hero-grid-lines { position: absolute; inset: 0; opacity: 0.15; background-image: linear-gradient(rgba(10, 252, 219, 0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(10, 252, 219, 0.25) 1px, transparent 1px); background-size: 5rem 5rem; mask-image: linear-gradient(90deg, black, transparent 68%); }
 .hero-content { position: relative; width: 100%; padding-top: 5rem; padding-bottom: 5rem; }
 .hero-kicker { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.25rem; color: #0afcdb; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.18em; }
@@ -310,7 +311,10 @@ footer {
 .hero-stage .hero-title .cyan-gradient-text { display: block; }
 .hero-stage .hero-subtitle { max-width: 32rem; margin: 2rem 0 0; color: #a5b0af; font-size: 1rem; line-height: 1.7; }
 .hero-stage .hero-actions { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.65rem; margin-top: 2rem; }
-.hero-action { display: inline-flex; align-items: center; gap: 0.55rem; min-height: 2.8rem; padding: 0.65rem 1rem; border: 1px solid rgba(10, 252, 219, 0.42); border-radius: 0.15rem; color: #d9f7f3; background: rgba(4, 17, 19, 0.84); font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+.hero-stage .hero-title,
+.hero-stage .hero-subtitle,
+.hero-stage .hero-actions { animation: none !important; }
+.hero-action { display: inline-flex; align-items: center; gap: 0.55rem; min-height: 2.8rem; padding: 0.65rem 1rem; border: 1px solid rgba(10, 252, 219, 0.42); border-radius: 0.15rem; color: #d9f7f3; background: rgba(4, 17, 19, 0.84); font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; transition: none; }
 .hero-action svg { width: 0.9rem; height: 0.9rem; }
 .hero-action:hover { color: #031012; background: #0afcdb; border-color: #0afcdb; }
 .hero-action-primary { color: #031012; background: #0afcdb; }
@@ -331,7 +335,7 @@ footer {
 
 @media (max-width: 767px) {
   .hero-stage { min-height: 48rem !important; }
-  .hero-portrait { inset: 0; opacity: 0.22; background-position: 62% 20%; }
+  .hero-portrait { top: 7rem; right: 1rem; bottom: 15rem; width: 9rem; opacity: 0.38; }
   .hero-content { padding-top: 7rem; padding-bottom: 8rem; }
   .hero-stage .hero-title { font-size: clamp(4rem, 19vw, 6rem) !important; }
   .hero-stage .hero-subtitle { max-width: 19rem; font-size: 0.86rem; }
