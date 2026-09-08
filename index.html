@@ -4,453 +4,148 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meesam Raza | Data Scientist & Generative AI Developer</title>
-    <meta
-      name="description"
-      content="Portfolio of Meesam Raza — Data Scientist, ML Engineer, and Generative AI Developer."
-    />
-
+    <meta name="description" content="Portfolio of Meesam Raza — Data Scientist, ML Engineer, and Generative AI Developer." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-[#0A0A0A] text-white antialiased selection:bg-cyan-500 selection:text-black">
+  <body>
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10 px-6 py-4">
-      <div class="max-w-6xl mx-auto flex items-center justify-between">
-        <span class="font-bold text-lg tracking-wider cyan-gradient-text">MR.</span>
-        <div id="nav-menu" class="hidden md:flex items-center gap-8 text-sm text-gray-300">
-          <a href="#about" class="nav-link hover:text-cyan-400 transition-colors">About</a>
-          <a href="#skills" class="nav-link hover:text-cyan-400 transition-colors">Skills</a>
-          <a href="#projects" class="nav-link hover:text-cyan-400 transition-colors">Projects</a>
-          <a href="#stats" class="nav-link hover:text-cyan-400 transition-colors">Impact</a>
-          <a href="#experience" class="nav-link hover:text-cyan-400 transition-colors">Experience</a>
-          <a href="#contact" class="nav-link hover:text-cyan-400 transition-colors">Contact</a>
+
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Meesam Raza home">MR<span>.</span></a>
+        <div id="nav-menu" class="nav-links">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#stats">Impact</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </div>
-        <div class="flex items-center gap-2">
-          <button id="theme-toggle" class="p-2 rounded-lg bg-white/5 border border-white/10 hover:border-cyan-400/50 transition-all" aria-label="Toggle theme">
-            <i data-lucide="sun" class="w-4 h-4 text-cyan-400"></i>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle theme" title="Toggle theme">
+            <i data-lucide="sun"></i>
           </button>
-          <button id="menu-toggle" class="p-2 rounded-lg bg-white/5 border border-white/10 md:hidden" aria-label="Open navigation" aria-expanded="false">
-            <i data-lucide="menu" class="w-4 h-4 text-cyan-400"></i>
+          <button id="menu-toggle" class="icon-button menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+            <i data-lucide="menu"></i>
           </button>
         </div>
+      </nav>
+      <div id="mobile-menu" class="mobile-menu">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </div>
-      <div id="mobile-menu" class="mobile-menu md:hidden">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-    </nav>
+    </header>
 
-    <section class="hero-stage relative min-h-screen flex items-center overflow-hidden pt-20">
-      <div id="particles-js" class="absolute inset-0 -z-10"></div>
-      <div class="hero-portrait" aria-hidden="true">
-        <img src="profile.gif" alt="Meesam Raza in a professional portrait" />
-      </div>
-      <div class="hero-grid-lines" aria-hidden="true"></div>
-
-      <div class="hero-social-rail" aria-label="Social links">
-        <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-        <a href="mailto:meesamraza331@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
-      </div>
-
-      <div class="hero-side-index" aria-hidden="true"><span>01</span><b>PROFILE</b><span>05</span><b>PROJECTS</b></div>
-
-      <div class="hero-content max-w-6xl mx-auto px-6 z-10 fade-up">
-        <div class="hero-kicker"><span></span> DATA SCIENCE / GENERATIVE AI</div>
-        <h1 class="hero-title">Meesam <span class="cyan-gradient-text">Raza</span></h1>
-        <p class="hero-subtitle">Data Scientist building predictive systems, intelligent applications, and useful interfaces from complex data.</p>
-
-        <div class="hero-actions">
-          <a href="#projects" class="hero-action hero-action-primary"><i data-lucide="arrow-down-right"></i> Explore work</a>
-          <a href="#contact" class="hero-action"><i data-lucide="mail"></i> Hire me</a>
-          <a href="Meesam_Raza_Resume.pdf" download="Meesam_Raza_Resume.pdf" class="hero-action hero-action-muted"><i data-lucide="download"></i> Resume PDF</a>
-        </div>
-
-        <div class="hero-metrics">
-          <div class="glass-card rounded-2xl p-4 fade-up stat-card">
-            <div class="text-2xl font-bold text-cyan-400"><span data-count="10000">0</span>+</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Records Cleaned</div>
-          </div>
-          <div class="glass-card rounded-2xl p-4 fade-up stat-card">
-            <div class="text-2xl font-bold text-cyan-400"><span data-count="88">0</span>%</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Model Accuracy</div>
-          </div>
-          <div class="glass-card rounded-2xl p-4 fade-up stat-card">
-            <div class="text-2xl font-bold text-cyan-400"><span data-count="3">0</span>x</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Faster Reporting</div>
-          </div>
-          <div class="glass-card rounded-2xl p-4 fade-up stat-card">
-            <div class="text-2xl font-bold text-cyan-400"><span data-count="5">0</span>+</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">AI Projects</div>
-          </div>
-        </div>
-      </div>
-
-      <a class="hero-scroll-cue" href="#about"><span>Scroll to explore</span><i data-lucide="arrow-down"></i></a>
-    </section>
-
-    <section id="about" class="py-24 relative">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12 items-center fade-up">
-          <div class="flex justify-center">
-            <div class="floating relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden glass-card p-2">
-              <div class="w-full h-full rounded-xl bg-gradient-to-tr from-cyan-500/20 via-blue-500/20 to-violet-500/20 flex items-center justify-center border border-white/10">
-                <span class="text-6xl font-bold cyan-gradient-text">MR</span>
-              </div>
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-shell">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span class="eyebrow-mark"></span> DATA SCIENCE / GENERATIVE AI</p>
+            <h1>Meesam <em>Raza</em></h1>
+            <p class="hero-lede">Data Scientist building predictive systems, intelligent applications, and useful interfaces from complex data.</p>
+            <div class="hero-actions">
+              <a href="#projects" class="button button-primary"><i data-lucide="arrow-down-right"></i> Explore work</a>
+              <a href="#contact" class="button button-secondary"><i data-lucide="mail"></i> Hire me</a>
+              <a href="Meesam_Raza_Resume.pdf" download="Meesam_Raza_Resume.pdf" class="button button-quiet"><i data-lucide="download"></i> Resume PDF</a>
             </div>
           </div>
+          <figure class="hero-portrait reveal reveal-delay-1">
+            <img src="profile.gif" alt="Meesam Raza in a professional portrait" />
+            <figcaption><span>PROFILE / 001</span><span>AVAILABLE FOR WORK</span></figcaption>
+          </figure>
+        </div>
+        <div class="hero-metrics" aria-label="Portfolio impact metrics">
+          <div class="metric"><strong><span data-count="10000">0</span>+</strong><span>Records Cleaned</span></div>
+          <div class="metric"><strong><span data-count="88">0</span>%</strong><span>Model Accuracy</span></div>
+          <div class="metric"><strong><span data-count="3">0</span>x</strong><span>Faster Reporting</span></div>
+          <div class="metric"><strong><span data-count="5">0</span>+</strong><span>AI Projects</span></div>
+        </div>
+        <div class="hero-footer">
+          <div class="social-links" aria-label="Social links">
+            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:meesamraza331@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+          <a class="scroll-cue" href="#about"><span>Scroll to explore</span><i data-lucide="arrow-down"></i></a>
+        </div>
+      </section>
 
-          <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-xs uppercase tracking-[0.2em] mb-4">About</div>
-            <h2 class="text-3xl font-bold mb-6">AI & data solutions that turn complexity into decisions</h2>
-            <p class="text-gray-300 text-lg leading-relaxed mb-6">
-              Data Scientist and Generative AI Developer skilled in Python, Machine Learning, and LLMs. Experienced building predictive models, chatbots, and data pipelines with Scikit-learn and LangChain, turning raw data into actionable business insights.
-            </p>
-            <div class="grid sm:grid-cols-2 gap-4 text-sm">
-              <div class="glass-card rounded-xl p-4">
-                <div class="text-cyan-400 font-semibold mb-1">Location</div>
-                <div class="text-gray-300">Khairpur, Sindh, Pakistan</div>
-              </div>
-              <div class="glass-card rounded-xl p-4">
-                <div class="text-cyan-400 font-semibold mb-1">Focus</div>
-                <div class="text-gray-300">ML, NLP, GenAI</div>
-              </div>
+      <section id="about" class="section about-section">
+        <div class="content-shell about-grid">
+          <div class="section-intro reveal">
+            <p class="eyebrow">01 / ABOUT</p>
+            <h2>AI & data solutions that turn complexity into decisions</h2>
+          </div>
+          <div class="about-copy reveal reveal-delay-1">
+            <p class="body-large">Data Scientist and Generative AI Developer skilled in Python, Machine Learning, and LLMs. Experienced building predictive models, chatbots, and data pipelines with Scikit-learn and LangChain, turning raw data into actionable business insights.</p>
+            <div class="fact-grid">
+              <div class="fact"><span>Location</span><strong>Khairpur, Sindh, Pakistan</strong></div>
+              <div class="fact"><span>Focus</span><strong>ML, NLP, GenAI</strong></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="stats" class="py-12">
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
-        <div class="glass-card p-6 rounded-2xl fade-up">
-          <div class="text-cyan-400 text-xs uppercase tracking-[0.25em] mb-2">Core</div>
-          <div class="text-3xl font-bold mb-2">Python</div>
-          <p class="text-gray-300 text-sm">Data science, ML pipelines, experimentation and automation.</p>
+      <section id="stats" class="signal-section">
+        <div class="content-shell signal-grid">
+          <article class="signal-card reveal"><span class="signal-label">CORE</span><strong>Python</strong><p>Data science, ML pipelines, experimentation and automation.</p></article>
+          <article class="signal-card reveal reveal-delay-1"><span class="signal-label">INTELLIGENT APPS</span><strong>LLMs</strong><p>Prompt engineering, retrieval workflows, and chatbot systems.</p></article>
+          <article class="signal-card reveal reveal-delay-2"><span class="signal-label">DELIVERY</span><strong>Deployment</strong><p>Streamlit, Flask, Docker, AWS and Railway-based app deployment.</p></article>
         </div>
-        <div class="glass-card p-6 rounded-2xl fade-up">
-          <div class="text-cyan-400 text-xs uppercase tracking-[0.25em] mb-2">Intelligent Apps</div>
-          <div class="text-3xl font-bold mb-2">LLMs</div>
-          <p class="text-gray-300 text-sm">Prompt engineering, retrieval workflows, and chatbot systems.</p>
-        </div>
-        <div class="glass-card p-6 rounded-2xl fade-up">
-          <div class="text-cyan-400 text-xs uppercase tracking-[0.25em] mb-2">Delivery</div>
-          <div class="text-3xl font-bold mb-2">Deployment</div>
-          <p class="text-gray-300 text-sm">Streamlit, Flask, Docker, AWS and Railway-based app deployment.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills" class="py-24 bg-black/40">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center fade-up section-title">Technical Skills</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="glass-card p-6 rounded-2xl fade-up">
-            <h3 class="text-xl font-semibold mb-4 text-cyan-400">AI / Machine Learning</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">Regression</span>
-              <span class="skill-chip">Classification</span>
-              <span class="skill-chip">Clustering</span>
-              <span class="skill-chip">Random Forest</span>
-              <span class="skill-chip">XGBoost</span>
-              <span class="skill-chip">Neural Networks</span>
-              <span class="skill-chip">PCA</span>
-            </div>
-          </div>
-          <div class="glass-card p-6 rounded-2xl fade-up">
-            <h3 class="text-xl font-semibold mb-4 text-cyan-400">Generative AI & NLP</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-chip">LLM Integration</span>
-              <span class="skill-chip">Prompt Engineering</span>
-              <span class="skill-chip">LangChain</span>
-              <span class="skill-chip">OpenAI API</span>
-              <span class="skill-chip">Chatbot Development</span>
-              <span class="skill-chip">RAG Systems</span>
-            </div>
-          </div>
-          <div class="glass-card p-6 rounded-2xl fade-up">
-            <h3 class="text-xl font-semibold mb-4 text-cyan-400">Programming & Data</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-chip">Python</span>
-              <span class="skill-chip">SQL</span>
-              <span class="skill-chip">R</span>
-              <span class="skill-chip">Java</span>
-              <span class="skill-chip">Scikit-learn</span>
-              <span class="skill-chip">Pandas</span>
-              <span class="skill-chip">Seaborn</span>
-              <span class="skill-chip">NumPy</span>
-            </div>
-          </div>
-          <div class="glass-card p-6 rounded-2xl fade-up">
-            <h3 class="text-xl font-semibold mb-4 text-cyan-400">Tools & Deployment</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-chip">Streamlit</span>
-              <span class="skill-chip">Flask</span>
-              <span class="skill-chip">Docker</span>
-              <span class="skill-chip">Git</span>
-              <span class="skill-chip">AWS</span>
-              <span class="skill-chip">Railway</span>
-              <span class="skill-chip">Power BI</span>
-            </div>
+      <section id="skills" class="section">
+        <div class="content-shell">
+          <div class="section-heading reveal"><p class="eyebrow">02 / TOOLKIT</p><h2>Technical Skills</h2></div>
+          <div class="skill-grid">
+            <article class="panel reveal"><h3>AI / Machine Learning</h3><div class="tag-list"><span>Python</span><span>Regression</span><span>Classification</span><span>Clustering</span><span>Random Forest</span><span>XGBoost</span><span>Neural Networks</span><span>PCA</span></div></article>
+            <article class="panel reveal reveal-delay-1"><h3>Generative AI & NLP</h3><div class="tag-list"><span>LLM Integration</span><span>Prompt Engineering</span><span>LangChain</span><span>OpenAI API</span><span>Chatbot Development</span><span>RAG Systems</span></div></article>
+            <article class="panel reveal reveal-delay-2"><h3>Programming & Data</h3><div class="tag-list"><span>Python</span><span>SQL</span><span>R</span><span>Java</span><span>Scikit-learn</span><span>Pandas</span><span>Seaborn</span><span>NumPy</span></div></article>
+            <article class="panel reveal reveal-delay-3"><h3>Tools & Deployment</h3><div class="tag-list"><span>Streamlit</span><span>Flask</span><span>Docker</span><span>Git</span><span>AWS</span><span>Railway</span><span>Power BI</span></div></article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="py-16">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="sales-signal-feature glass-card rounded-3xl border border-amber-400/30 relative overflow-hidden fade-up">
-          <div class="sales-signal-copy">
-            <div class="flex items-center gap-2 text-amber-300 text-xs font-semibold tracking-widest uppercase mb-4">
-              <i data-lucide="chart-no-axes-combined" class="w-4 h-4"></i> Featured ML Demo
-            </div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Sales Signal</h2>
-            <p class="text-gray-300 max-w-2xl mb-6">An interactive Flask app that estimates product sales from TV, radio, and newspaper advertising budgets using a clear linear regression workflow.</p>
-            <div class="flex flex-wrap gap-2 mb-8">
-              <span class="sales-tag">Flask</span>
-              <span class="sales-tag">Linear Regression</span>
-              <span class="sales-tag">JSON API</span>
-              <span class="sales-tag">Gunicorn</span>
-            </div>
-            <div class="flex flex-wrap gap-4">
-              <a href="https://web-production-741a1.up.railway.app/predict" target="_blank" rel="noreferrer" class="px-6 py-3 bg-amber-300 text-[#17120a] font-semibold rounded-xl hover:bg-amber-200 transition-all flex items-center gap-2 cta-button">
-                Try Live Demo <i data-lucide="external-link" class="w-4 h-4"></i>
-              </a>
-              <a href="https://github.com/meesam331/sales_prediction_app" target="_blank" rel="noreferrer" class="px-6 py-3 border border-amber-200/25 rounded-xl hover:bg-amber-300/10 transition-all flex items-center gap-2 cta-button">
-                View Source <i data-lucide="github" class="w-4 h-4"></i>
-              </a>
-            </div>
-          </div>
-          <div class="sales-signal-visual" aria-label="Sales Signal dashboard preview">
-            <div class="signal-visual-header"><span>CAMPAIGN FORECAST</span><span class="signal-status"><i data-lucide="activity" class="w-3 h-3"></i> LIVE</span></div>
-            <div class="signal-total"><strong>$18.4k</strong><span>predicted sales</span></div>
-            <div class="signal-chart" aria-hidden="true">
-              <span style="height: 32%"></span><span style="height: 48%"></span><span style="height: 42%"></span><span style="height: 64%"></span><span style="height: 58%"></span><span style="height: 82%"></span><span style="height: 74%"></span><span style="height: 94%"></span>
-            </div>
-            <div class="signal-inputs"><span>TV <b>$150</b></span><span>RADIO <b>$25</b></span><span>NEWS <b>$20</b></span></div>
-          </div>
+      <section class="section feature-section">
+        <div class="content-shell feature-stack">
+          <article class="feature-card feature-amber reveal">
+            <div class="feature-copy"><p class="eyebrow amber-text"><i data-lucide="chart-no-axes-combined"></i> FEATURED ML DEMO</p><h2>Sales Signal</h2><p>An interactive Flask app that estimates product sales from TV, radio, and newspaper advertising budgets using a clear linear regression workflow.</p><div class="tag-list"><span>Flask</span><span>Linear Regression</span><span>JSON API</span><span>Gunicorn</span></div><div class="feature-actions"><a href="https://web-production-741a1.up.railway.app/predict" target="_blank" rel="noreferrer" class="button button-amber">Try Live Demo <i data-lucide="external-link"></i></a><a href="https://github.com/meesam331/sales_prediction_app" target="_blank" rel="noreferrer" class="button button-outline-amber">View Source <i data-lucide="github"></i></a></div></div>
+            <div class="dashboard-preview" aria-label="Sales Signal dashboard preview"><div class="dashboard-top"><span>CAMPAIGN FORECAST</span><b><i data-lucide="activity"></i> LIVE</b></div><div class="forecast-total"><strong>$18.4k</strong><span>predicted sales</span></div><div class="signal-chart" aria-hidden="true"><span style="height:32%"></span><span style="height:48%"></span><span style="height:42%"></span><span style="height:64%"></span><span style="height:58%"></span><span style="height:82%"></span><span style="height:74%"></span><span style="height:94%"></span></div><div class="dashboard-inputs"><span>TV <b>$150</b></span><span>RADIO <b>$25</b></span><span>NEWS <b>$20</b></span></div></div>
+          </article>
+          <article class="feature-card feature-mint reveal"><div class="feature-copy"><p class="eyebrow mint-text"><i data-lucide="sparkles"></i> VIP FEATURED SHOWCASE</p><h2>Air Quality Index Prediction System — Khairpur</h2><p>Built and deployed a high-accuracy regression pipeline using Random Forest and XGBoost to monitor and predict local environmental metrics.</p><div class="tag-list"><span>Streamlit</span><span>XGBoost</span><span>Random Forest</span><span>Railway</span></div><div class="feature-actions"><a href="https://railway.app" target="_blank" rel="noreferrer" class="button button-mint">View Live Demo <i data-lucide="external-link"></i></a><a href="https://github.com" target="_blank" rel="noreferrer" class="button button-secondary">View Source <i data-lucide="code-2"></i></a></div></div></article>
         </div>
+      </section>
 
-        <div class="glass-card p-8 md:p-12 rounded-3xl border border-cyan-500/30 relative overflow-hidden fade-up">
-          <div class="flex items-center gap-2 text-cyan-400 text-xs font-semibold tracking-widest uppercase mb-4">
-            <i data-lucide="sparkles" class="w-4 h-4"></i> VIP Featured Showcase
-          </div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Air Quality Index Prediction System — Khairpur</h2>
-          <p class="text-gray-300 max-w-2xl mb-6">Built and deployed a high-accuracy regression pipeline using Random Forest and XGBoost to monitor and predict local environmental metrics.</p>
-          <div class="flex flex-wrap gap-2 mb-8">
-            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs rounded-full">Streamlit</span>
-            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs rounded-full">XGBoost</span>
-            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs rounded-full">Random Forest</span>
-            <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs rounded-full">Railway</span>
-          </div>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://railway.app" target="_blank" rel="noreferrer" class="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-xl hover:bg-cyan-300 transition-all flex items-center gap-2 cta-button">
-              View Live Demo <i data-lucide="external-link" class="w-4 h-4"></i>
-            </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="px-6 py-3 border border-white/20 rounded-xl hover:bg-white/5 transition-all flex items-center gap-2 cta-button">
-              View Source <i data-lucide="code-2" class="w-4 h-4"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section id="projects" class="section project-section">
+        <div class="content-shell"><div class="section-heading reveal"><p class="eyebrow">03 / SELECTED WORK</p><h2>Featured Projects</h2></div><div class="project-grid">
+          <article class="project-card reveal"><div><span class="project-type amber-text">ML / FLASK</span><h3>Sales Signal</h3><p>A lightweight sales forecasting API that turns three advertising inputs into an explainable prediction.</p></div><div><div class="mini-tags"><span>Python</span><span>Flask</span><span>Regression</span></div><a href="https://github.com/meesam331/sales_prediction_app" target="_blank" rel="noreferrer">View on GitHub <i data-lucide="github"></i></a></div></article>
+          <article class="project-card reveal reveal-delay-1"><div><span class="project-type mint-text">AI / ML</span><h3>Air Quality Index Prediction System</h3><p>Predictive AQI regression model utilizing Random Forest and XGBoost deployed for real-time inference.</p></div><div><div class="mini-tags"><span>Python</span><span>Streamlit</span><span>XGBoost</span></div><a href="https://github.com" target="_blank" rel="noreferrer">View on GitHub <i data-lucide="code-2"></i></a></div></article>
+          <article class="project-card reveal reveal-delay-2"><div><span class="project-type mint-text">FORECASTING</span><h3>Next-Day Stock Price Prediction</h3><p>Time-series forecasting regression model designed to project daily market performance, evaluated using RMSE and MAE.</p></div><div><div class="mini-tags"><span>Python</span><span>Time-Series</span><span>Scikit-learn</span></div><a href="https://github.com" target="_blank" rel="noreferrer">View on GitHub <i data-lucide="code-2"></i></a></div></article>
+          <article class="project-card reveal reveal-delay-3"><div><span class="project-type mint-text">ANALYTICS</span><h3>Unemployment in Pakistan (2000–2023)</h3><p>In-depth analytical visualization mapping 20+ years of regional macroeconomic trends through interactive heatmaps.</p></div><div><div class="mini-tags"><span>Data Analytics</span><span>Pandas</span><span>Seaborn</span></div><a href="https://github.com" target="_blank" rel="noreferrer">View on GitHub <i data-lucide="code-2"></i></a></div></article>
+        </div></div>
+      </section>
 
-    <section id="projects" class="py-24">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center fade-up section-title">Featured Projects</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-amber-300/40 transition-all project-card fade-up sales-signal-card">
-            <div>
-              <span class="text-xs uppercase tracking-[0.25em] text-amber-300 mb-3 inline-block">ML / Flask</span>
-              <h3 class="text-xl font-semibold mb-3">Sales Signal</h3>
-              <p class="text-gray-400 text-sm mb-6 leading-relaxed">A lightweight sales forecasting API that turns three advertising inputs into an explainable prediction.</p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="text-xs px-2.5 py-1 bg-amber-300/10 text-amber-200 rounded-md">Python</span>
-                <span class="text-xs px-2.5 py-1 bg-amber-300/10 text-amber-200 rounded-md">Flask</span>
-                <span class="text-xs px-2.5 py-1 bg-amber-300/10 text-amber-200 rounded-md">Regression</span>
-              </div>
-              <a href="https://github.com/meesam331/sales_prediction_app" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-amber-300 transition-colors">
-                <i data-lucide="github" class="w-4 h-4"></i> View on GitHub
-              </a>
-            </div>
-          </div>
+      <section id="experience" class="section experience-section"><div class="content-shell"><div class="section-heading reveal"><p class="eyebrow">04 / EXPERIENCE</p><h2>Work Experience</h2></div><div class="timeline">
+        <article class="timeline-item reveal"><span class="timeline-dot"></span><p class="timeline-role">Data Science Intern</p><p class="timeline-company">Data Zenix Company (Remote)</p><ul><li>Cleaned and preprocessed 10,000+ record datasets, reducing missing data by 20% using KNN and mean/median imputation.</li><li>Automated reports and visualizations in Python, Pandas, and Seaborn, improving delivery speed by 3x.</li></ul></article>
+        <article class="timeline-item reveal reveal-delay-1"><span class="timeline-dot"></span><p class="timeline-role">AI & Machine Learning Intern</p><p class="timeline-company">DevelopersHub Corporation (Remote)</p><ul><li>Built classification models (Logistic Regression, Random Forest, Gradient Boosting) achieving 88% accuracy via GridSearchCV tuning.</li><li>Applied PCA and correlation analysis for feature selection, improving model performance and interpretability.</li></ul></article>
+        <article class="timeline-item reveal reveal-delay-2"><span class="timeline-dot"></span><p class="timeline-role">GenAI Consulting Virtual Intern</p><p class="timeline-company">BCG Simulation (Remote)</p><ul><li>Built a prototype chatbot using LangChain and OpenAI API to answer financial queries from 10-K report data.</li><li>Applied prompt engineering to improve response accuracy and relevance.</li></ul></article>
+      </div></div></section>
 
-          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-cyan-500/40 transition-all project-card fade-up">
-            <div>
-              <span class="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-3 inline-block">AI / ML</span>
-              <h3 class="text-xl font-semibold mb-3">Air Quality Index Prediction System</h3>
-              <p class="text-gray-400 text-sm mb-6 leading-relaxed">Predictive AQI regression model utilizing Random Forest and XGBoost deployed for real-time inference.</p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Python</span>
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Streamlit</span>
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">XGBoost</span>
-              </div>
-              <a href="https://github.com" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors">
-                <i data-lucide="code-2" class="w-4 h-4"></i> View on GitHub
-              </a>
-            </div>
-          </div>
+      <section id="contact" class="section contact-section"><div class="content-shell"><div class="section-heading reveal"><p class="eyebrow">05 / CONTACT</p><h2>Get In Touch</h2></div><div class="contact-grid">
+        <div class="contact-copy panel reveal"><h3>Let's build something together</h3><p>I am actively seeking AI/ML Engineer opportunities. Feel free to reach out via email or direct message.</p><div class="contact-links"><a href="mailto:meesamraza331@gmail.com"><i data-lucide="mail"></i> meesamraza331@gmail.com</a><a href="https://github.com" target="_blank" rel="noreferrer"><i data-lucide="code-2"></i> GitHub</a><a href="https://linkedin.com" target="_blank" rel="noreferrer"><i data-lucide="briefcase-business"></i> LinkedIn</a></div></div>
+        <form id="contact-form" class="contact-form panel reveal reveal-delay-1"><label for="name">Your Name</label><input id="name" name="name" type="text" placeholder="Your Name" required /><label for="email">Your Email</label><input id="email" name="email" type="email" placeholder="Your Email" required /><label for="message">Your Message</label><textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea><button type="submit" class="button button-primary">Send Message <i data-lucide="send"></i></button><div id="toast" class="toast hidden">Message sent successfully!</div></form>
+      </div></div></section>
+    </main>
 
-          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-cyan-500/40 transition-all project-card fade-up">
-            <div>
-              <span class="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-3 inline-block">Forecasting</span>
-              <h3 class="text-xl font-semibold mb-3">Next-Day Stock Price Prediction</h3>
-              <p class="text-gray-400 text-sm mb-6 leading-relaxed">Time-series forecasting regression model designed to project daily market performance, evaluated using RMSE and MAE.</p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Python</span>
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Time-Series</span>
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Scikit-learn</span>
-              </div>
-              <a href="https://github.com" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors">
-                <i data-lucide="code-2" class="w-4 h-4"></i> View on GitHub
-              </a>
-            </div>
-          </div>
-
-          <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-cyan-500/40 transition-all project-card fade-up">
-            <div>
-              <span class="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-3 inline-block">Analytics</span>
-              <h3 class="text-xl font-semibold mb-3">Unemployment in Pakistan (2000–2023)</h3>
-              <p class="text-gray-400 text-sm mb-6 leading-relaxed">In-depth analytical visualization mapping 20+ years of regional macroeconomic trends through interactive heatmaps.</p>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Data Analytics</span>
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Pandas</span>
-                <span class="text-xs px-2.5 py-1 bg-cyan-500/10 text-cyan-300 rounded-md">Seaborn</span>
-              </div>
-              <a href="https://github.com" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors">
-                <i data-lucide="code-2" class="w-4 h-4"></i> View on GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="py-24 bg-black/40">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-16 text-center fade-up section-title">Work Experience</h2>
-        <div class="max-w-3xl mx-auto relative border-l border-white/10 pl-6 md:pl-8 space-y-12">
-          <div class="relative fade-up glass-card p-6 rounded-2xl">
-            <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_10px_#00F5FF]"></div>
-            <h3 class="text-xl font-bold">Data Science Intern</h3>
-            <div class="text-cyan-400 text-sm mb-4">Data Zenix Company (Remote)</div>
-            <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
-              <li>Cleaned and preprocessed 10,000+ record datasets, reducing missing data by 20% using KNN and mean/median imputation.</li>
-              <li>Automated reports and visualizations in Python, Pandas, and Seaborn, improving delivery speed by 3x.</li>
-            </ul>
-          </div>
-
-          <div class="relative fade-up glass-card p-6 rounded-2xl">
-            <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_10px_#00F5FF]"></div>
-            <h3 class="text-xl font-bold">AI & Machine Learning Intern</h3>
-            <div class="text-cyan-400 text-sm mb-4">DevelopersHub Corporation (Remote)</div>
-            <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
-              <li>Built classification models (Logistic Regression, Random Forest, Gradient Boosting) achieving 88% accuracy via GridSearchCV tuning.</li>
-              <li>Applied PCA and correlation analysis for feature selection, improving model performance and interpretability.</li>
-            </ul>
-          </div>
-
-          <div class="relative fade-up glass-card p-6 rounded-2xl">
-            <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_10px_#00F5FF]"></div>
-            <h3 class="text-xl font-bold">GenAI Consulting Virtual Intern</h3>
-            <div class="text-cyan-400 text-sm mb-4">BCG Simulation (Remote)</div>
-            <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
-              <li>Built a prototype chatbot using LangChain and OpenAI API to answer financial queries from 10-K report data.</li>
-              <li>Applied prompt engineering to improve response accuracy and relevance.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="py-24">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center fade-up section-title">Get In Touch</h2>
-        <div class="grid md:grid-cols-2 gap-12 fade-up">
-          <div class="glass-card p-6 rounded-2xl">
-            <h3 class="text-xl font-semibold mb-4">Let's build something together</h3>
-            <p class="text-gray-400 text-sm mb-8 leading-relaxed">
-              I am actively seeking AI/ML Engineer opportunities. Feel free to reach out via email or direct message.
-            </p>
-            <div class="space-y-4 text-sm text-gray-300">
-              <a href="mailto:meesamraza331@gmail.com" class="flex items-center gap-3 hover:text-cyan-400 transition-colors">
-                <i data-lucide="mail" class="w-5 h-5 text-cyan-400"></i> meesamraza331@gmail.com
-              </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" class="flex items-center gap-3 hover:text-cyan-400 transition-colors">
-                <i data-lucide="code-2" class="w-5 h-5 text-cyan-400"></i> GitHub
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="flex items-center gap-3 hover:text-cyan-400 transition-colors">
-                <i data-lucide="briefcase-business" class="w-5 h-5 text-cyan-400"></i> LinkedIn
-              </a>
-            </div>
-          </div>
-
-          <form id="contact-form" class="glass-card p-6 rounded-2xl space-y-4">
-            <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all text-sm" />
-            <input type="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all text-sm" />
-            <textarea rows="4" placeholder="Your Message" required class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all text-sm resize-none"></textarea>
-            <button type="submit" class="w-full py-3.5 bg-cyan-400 text-black font-semibold rounded-xl hover:bg-cyan-300 transition-all flex items-center justify-center gap-2 text-sm shadow-[0_0_15px_rgba(0,245,255,0.2)] cta-button">
-              Send Message <i data-lucide="send" class="w-4 h-4"></i>
-            </button>
-            <div id="toast" class="hidden p-3 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-center rounded-xl text-sm">
-              Message sent successfully!
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <footer class="py-8 border-t border-white/10 text-center text-xs text-gray-500">
-      <div class="max-w-6xl mx-auto px-6">
-        © <span id="year"></span> Meesam Raza. Built with HTML, CSS & JS.
-      </div>
-    </footer>
-
-    <button
-      type="button"
-      id="floating-sound-control"
-      data-floating-sound-control
-      data-no-click-sound="true"
-      aria-label="Turn sound off"
-      aria-pressed="true"
-      title="Sound on, click to mute"
-      class="audio-control"
-    >
-      <span class="audio-control-orbit" aria-hidden="true"></span>
-      <span class="audio-control-ring" aria-hidden="true"></span>
-      <span class="audio-control-core">
-        <span class="audio-control-glow" aria-hidden="true"></span>
-        <svg class="audio-wave" viewBox="0 0 104 60" role="img" aria-hidden="true">
-          <title>Sound on</title>
-          <path d="M6 30 L10 30 L13 26 L17 34 L21 30 L24 20 L28 40 L32 28 L37 32 L42 30 L46 18 L50 42 L55 27 L60 33 L65 30 L70 16 L75 44 L80 28 L86 32 L91 30 L95 29 L98 30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" class="audio-wave-trace"></path>
-          <path d="M6 30 L10 30 L13 26 L17 34 L21 30 L24 20 L28 40 L32 28 L37 32 L42 30 L46 18 L50 42 L55 27 L60 33 L65 30 L70 16 L75 44 L80 28 L86 32 L91 30 L95 29 L98 30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" class="audio-wave-active"></path>
-          <path d="M6 30 L10 30 L13 30 L17 30 L21 30 L24 30 L28 30 L32 30 L37 30 L42 30 L46 30 L50 30 L55 30 L60 30 L65 30 L70 30 L75 30 L80 30 L86 30 L91 30 L95 30 L98 30" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.6" class="audio-wave-muted"></path>
-        </svg>
-      </span>
-    </button>
-
+    <footer><div class="content-shell">© <span id="year"></span> Meesam Raza. Built with HTML, CSS & JS.</div></footer>
+    <button type="button" id="floating-sound-control" data-floating-sound-control data-no-click-sound="true" aria-label="Turn sound off" aria-pressed="true" title="Sound on, click to mute" class="audio-control"><i data-lucide="volume-2"></i></button>
     <script src="script.js"></script>
   </body>
 </html>
